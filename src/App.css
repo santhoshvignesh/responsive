@@ -1,0 +1,5 @@
+.App-main {
+    margin-top: 50px; /* Adds space between the header and main content */
+    min-height: calc(100vh - 200px); /* Ensures the main section takes up enough space */
+    padding-bottom: 50px; /* Adds space between main content and footer */
+  }

@@ -1,6 +1,6 @@
-// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.css'; 
+import { Route, Routes } from 'react-router-dom';
 import NavBar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -9,11 +9,16 @@ import Projects from './pages/Project';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
+import Footer from './components/Footer';
 
 function App() {
   return (
-      <div>
+    <div className="App">
+      <header className="App-header">
         <NavBar />
+      </header>
+      <main className="App-main">
+        <h1>Welcome to the HomePage</h1>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -23,7 +28,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
         </Routes>
-      </div>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
