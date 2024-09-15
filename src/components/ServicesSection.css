@@ -1,0 +1,57 @@
+.services-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* You can change the background color */
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .services-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Makes it responsive */
+    gap: 20px;
+  }
+  
+  .service-box {
+    flex: 1 1 22%; /* 4 boxes in a row, with some flexibility */
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-box:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-box h3 {
+    font-size: 20px;
+    color: #111;
+    margin-bottom: 15px;
+  }
+  
+  .service-box p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .service-box {
+      flex: 1 1 45%; /* Adjust to 2 in a row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .service-box {
+      flex: 1 1 100%; /* Adjust to 1 in a row on small mobile screens */
+    }
+  }
+  

@@ -1,7 +1,8 @@
 import React from 'react';
-import './App.css'; 
+import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import NavBar from './components/Navbar';
+import ServicesSection from './components/ServicesSection'; // Make sure to import the ServicesSection component
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <NavBar />
+        <img src="/Synergy Logo.png" alt="Synergy Logo" className="logo" /> {/* Access from public folder */}
       </header>
       <main className="App-main">
         <h1>Welcome to the HomePage</h1>
@@ -29,6 +31,7 @@ function App() {
           <Route path="/login" element={<Login />} />
         </Routes>
       </main>
+      <ServicesSection /> {/* Services section placed above Footer */}
       <Footer />
     </div>
   );

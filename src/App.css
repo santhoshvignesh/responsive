@@ -3,3 +3,8 @@
     min-height: calc(100vh - 200px); /* Ensures the main section takes up enough space */
     padding-bottom: 50px; /* Adds space between main content and footer */
   }
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+ 
