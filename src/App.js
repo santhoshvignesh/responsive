@@ -31,7 +31,7 @@ function App() {
           <Route path="/login" element={<Login />} />
         </Routes>
       </main>
-      <ServicesSection /> {/* Services section placed above Footer */}
+      {/* <ServicesSection /> Services section placed above Footer */}
       <Footer />
     </div>
   );
