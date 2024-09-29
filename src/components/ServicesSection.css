@@ -1,58 +1,84 @@
+/* About Synergy Section */
+.about-synergy-section {
+  padding: 40px 20px;
+  background-color: #f1f1f1; /* Light background for contrast */
+  text-align: center;
+}
+
+.about-synergy-section h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about-synergy-section p {
+  font-size: 16px;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Horizontal Rule */
+.custom-hr {
+  border: none;
+  border-top: 2px solid #AA5566;
+  margin: 40px 0;
+}
+
+/* Existing Services Section */
 .services-section {
-    padding: 50px 20px;
-    background-color: #f9f9f9; /* You can change the background color */
-  }
-  
-  .section-title {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: #333;
-  }
-  
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.service-box {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: calc(25% - 20px); /* Ensure boxes take up 4 columns with space in-between */
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+}
+
+.service-box h3 {
+  font-size: 20px;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.service-box p {
+  font-size: 16px;
+  color: #555;
+}
+
+@media (max-width: 768px) {
   .services-container {
-    display: flex;
-    justify-content: space-between;
-    /* flex-wrap: wrap;  */
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .service-box {
-    /* flex: 1 1 22%; */
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-    width: 1000px;
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 20px;
   }
-  
-  .service-box:hover {
-    transform: translateY(-10px);
-  }
-  
-  .service-box h3 {
-    font-size: 20px;
-    color: #111;
-    margin-bottom: 15px;
-  }
-  
-  .service-box p {
-    font-size: 16px;
-    color: #555;
-  }
-  
-  @media (max-width: 768px) {
-    .service-box {
-      flex: 1 1 45%; /* Adjust to 2 in a row on smaller screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .service-box {
-      flex: 1 1 100%; /* Adjust to 1 in a row on small mobile screens */
-    }
-  }
-  
+}
