@@ -1,29 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// Import FontAwesome components
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'; // Import specific icons
-import './Navbar.css'; // For styling the navigation bar
+import './Navbar.css'; 
 
 function NavBar() {
   return (
-    <>
-      {/* Social Media Bar */}
-      <div className="social-media-bar">
-        <div className="social-media-links">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="social-link">
-            <FontAwesomeIcon icon={faFacebook} className="social-icon" /> Facebook
-          </a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link">
-            <FontAwesomeIcon icon={faLinkedin} className="social-icon" /> LinkedIn
-          </a>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="social-link">
-            <FontAwesomeIcon icon={faTwitter} className="social-icon" /> Twitter
-          </a>
-        </div>
-      </div>
-
-      {/* Header (Navbar) */}
       <nav className="navbar">
         <div className="navbar-logo">
           <img src="/photos/Synergy Logo.png" alt="Synergy Logo" />
@@ -51,7 +31,6 @@ function NavBar() {
           <li><Link to="/login">Login</Link></li>
         </ul>
       </nav>
-    </>
   );
 }
 
