@@ -1,3 +1,50 @@
+/* Main Section Styles */
+.services-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+/* Image Container */
+.image-container {
+  position: relative; /* Position relative for overlay positioning */
+  overflow: hidden; /* Ensure child elements don’t overflow */
+  text-align: center; /* Center content */
+}
+
+/* Image rotation styles */
+.about-image {
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto;
+  border-radius: 8px; /* Optional: Add rounded corners to the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  transition: opacity 1s ease-in-out;
+}
+
+/* Overlay for Content Inside Image */
+.overlay {
+  position: absolute; /* Position absolutely within the container */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position to center */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  padding: 20px; /* Padding for content */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for overlay */
+}
+
+/* Overlay Heading and Paragraph */
+.overlay-heading {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.overlay-paragraph {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
 /* About Synergy Section */
 .about-synergy-section {
   padding: 40px 20px;
@@ -26,12 +73,7 @@
   margin: 40px 0;
 }
 
-/* Existing Services Section */
-.services-section {
-  padding: 50px 20px;
-  background-color: #f9f9f9;
-}
-
+/* Services Section */
 .section-title {
   text-align: center;
   font-size: 32px;
@@ -45,10 +87,11 @@
   gap: 20px;
 }
 
+/* Service Box */
 .service-box {
+  position: relative; /* Position relative for image and text overlay */
   background-color: #fff;
   border: 1px solid #e0e0e0;
-  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -56,21 +99,45 @@
   width: calc(25% - 20px); /* Ensure boxes take up 4 columns with space in-between */
 }
 
+/* Service Image */
+.service-image-container {
+  position: relative;
+}
+
+.service-image {
+  width: 100%; /* Full width for the image */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Service Overlay */
+.service-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.service-box:hover .service-overlay {
+  opacity: 1;
+}
+
+/* Hover Effect for Service Box */
 .service-box:hover {
   transform: translateY(-10px);
 }
 
-.service-box h3 {
-  font-size: 20px;
-  color: #111;
-  margin-bottom: 15px;
-}
-
-.service-box p {
-  font-size: 16px;
-  color: #555;
-}
-
+/* Responsive Styles */
 @media (max-width: 768px) {
   .services-container {
     flex-direction: column;
